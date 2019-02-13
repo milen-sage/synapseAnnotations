@@ -14,9 +14,10 @@ create_enum <- function(list) {
 
 ## Given an annotation entry, convert it to JSON Schema format
 create_schema_from_entry <- function(x) {
-  name <- x$name
   desc <- x$description %||% ""
   if (!is.null(x$enumValues)) {
+    ## If there are enum values, turn those into objects using `"const"` so we
+    ## can attach description and source as well
     enum <- purrr::map(x$enumValues, create_enum)
     ret <- list(
       name = list(
@@ -25,6 +26,7 @@ create_schema_from_entry <- function(x) {
       )
     )
   } else if (!is.null(x$columnType)) {
+    ## Some annotations just have a column type; in that case set this to "type"
     ret <- list(
       name = list(
         description = desc,
@@ -32,18 +34,21 @@ create_schema_from_entry <- function(x) {
       )
     )
   }
-  names(ret) <- name
+  names(ret) <- x$name
   ret
 }
 
+## Load sageCommunity json to test with
 sage_comm <- read_json(
   "../synapseAnnotations/data/sageCommunity.json",
   simplifyVector = FALSE
 )
 
+## Create definitions
 definitions <- map(sage_comm, create_schema_from_entry) %>%
   unlist(recursive = FALSE)
 
+## Add additional JSON Schema stuff and convert to JSON
 output_json <- list(
     "$schema" = "http://json-schema.org/draft-07/schema#",
     "$id" = "http://example.com/definitions.json",
