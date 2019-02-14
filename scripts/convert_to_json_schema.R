@@ -4,6 +4,7 @@
 
 library("purrr")
 library("rlang")
+library("jsonlite")
 
 ## Convert our enumerated values objects with description etc. into schema
 ## objects (with value as "const" and additional properties for description and
