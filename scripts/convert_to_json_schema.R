@@ -16,7 +16,7 @@ create_enum <- function(list) {
 ## Given an annotation entry, convert it to JSON Schema format
 create_schema_from_entry <- function(x) {
   desc <- x$description %||% ""
-  if (!is.null(x$enumValues)) {
+  if (length(x$enumValues) > 0) {
     ## If there are enum values, turn those into objects using `"const"` so we
     ## can attach description and source as well
     enum <- purrr::map(x$enumValues, create_enum)
