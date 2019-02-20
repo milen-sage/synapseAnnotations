@@ -45,22 +45,37 @@ create_schema_from_entry <- function(x) {
   ret
 }
 
-## Load sageCommunity json to test with
-sage_comm <- read_json(
-  "../synapseAnnotations/data/sageCommunity.json",
-  simplifyVector = FALSE
-)
-
-## Create definitions
-definitions <- map(sage_comm, create_schema_from_entry) %>%
-  unlist(recursive = FALSE)
+## Given a set of entries (e.g. one file from our synapseAnnotations/data/
+## folder), create a set of definitions
+create_schema_from_entries <- function(x) {
+  map(x, create_schema_from_entry) %>%
+    unlist(recursive = FALSE)
+}
 
 ## Add additional JSON Schema stuff and convert to JSON
-output_json <- list(
+create_output_json <- function(definitions) {
+  list(
     "$schema" = "http://json-schema.org/draft-07/schema#",
     "$id" = "http://example.com/definitions.json",
     "definitions" = definitions
   ) %>%
-  toJSON(auto_unbox = TRUE, pretty = TRUE)
+    toJSON(auto_unbox = TRUE, pretty = TRUE)
+}
 
-write(output_json, "../synapseAnnotations/schemas/definitions.json")
+## Convert sageCommunity and experimentalData json
+test_files <- list.files(
+  "../synapseAnnotations/data",
+  pattern = "sageCommunity|experimentalData",
+  full.names = TRUE
+)
+names(test_files) <- basename(test_files)
+
+test_data <- test_files %>%
+  map(read_json, simplifyVector = FALSE) %>%
+  map(create_schema_from_entries) %>%
+  map(create_output_json)
+
+iwalk(
+  test_data,
+  function(x, y) write(x, paste0("../synapseAnnotations/schemas/", y))
+)
