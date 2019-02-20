@@ -31,7 +31,13 @@ create_schema_from_entry <- function(x) {
     ret <- list(
       name = list(
         description = desc,
-        type = x$columnType
+        type = switch(
+          x$columnType,
+          "STRING" = "string",
+          "BOOLEAN" = "boolean",
+          "INTEGER" = "integer",
+          "DOUBLE" = "number"
+        )
       )
     )
   }
