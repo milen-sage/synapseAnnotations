@@ -56,10 +56,10 @@ create_schema_from_entries <- function(x) {
 }
 
 ## Add additional JSON Schema stuff and convert to JSON
-create_output_json <- function(definitions) {
+create_output_json <- function(definitions, name) {
   list(
     "$schema" = "http://json-schema.org/draft-07/schema#",
-    "$id" = "http://example.com/definitions.json",
+    "$id" = paste0("http://example.com/", name),
     "definitions" = definitions
   ) %>%
     toJSON(auto_unbox = TRUE, pretty = TRUE)
@@ -76,7 +76,7 @@ names(test_files) <- basename(test_files)
 test_data <- test_files %>%
   map(read_json, simplifyVector = FALSE) %>%
   map(create_schema_from_entries) %>%
-  map(create_output_json)
+  imap(create_output_json)
 
 iwalk(
   test_data,
