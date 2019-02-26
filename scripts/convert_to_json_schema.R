@@ -65,20 +65,19 @@ create_output_json <- function(definitions, name) {
     toJSON(auto_unbox = TRUE, pretty = TRUE)
 }
 
-## Convert sageCommunity and experimentalData json
-test_files <- list.files(
+## Convert files
+files <- list.files(
   "../synapseAnnotations/data",
-  pattern = "sageCommunity|experimentalData",
   full.names = TRUE
 )
-names(test_files) <- basename(test_files)
+names(files) <- basename(files)
 
-test_data <- test_files %>%
+json_data <- files %>%
   map(read_json, simplifyVector = FALSE) %>%
   map(create_schema_from_entries) %>%
   imap(create_output_json)
 
 iwalk(
-  test_data,
+  json_data,
   function(x, y) write(x, paste0("../synapseAnnotations/schemas/", y))
 )
