@@ -48,6 +48,9 @@ create_schema_from_entry <- function(x) {
 ## Given a set of entries (e.g. one file from our synapseAnnotations/data/
 ## folder), create a set of definitions
 create_schema_from_entries <- function(x) {
+  if (is.atomic(x[[1]])) {
+    x <- list(x)
+  }
   map(x, create_schema_from_entry) %>%
     unlist(recursive = FALSE)
 }
