@@ -79,5 +79,5 @@ json_data <- files %>%
 
 iwalk(
   json_data,
-  function(x, y) write(x, paste0("../synapseAnnotations/schemas/", y))
+  function(x, y) write(x, paste0("../synapseAnnotations/schemas/definitions/", y))
 )
