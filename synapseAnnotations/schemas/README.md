@@ -1,8 +1,8 @@
 # Schemas
 
-Schemas in JSON Schema format. These are translated from the files in `../data/`
-by the `convert_to_json_schema.R` script. To check that they are valid:
+An example schema for AMP-AD. It references the definitions in the
+`definitions/` folder. To check that the schema is valid JSON Schema:
 
 ```
-ajv compile -s "*.json"
+ajv compile -s ampad_schema.json -r "definitions/*.json"
 ```
