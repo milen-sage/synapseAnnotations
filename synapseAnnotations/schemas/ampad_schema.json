@@ -60,7 +60,7 @@
     }
   },
   "required": [
-    "resourceType", "assay", "species", "organ", "tissue", "cellType", "fileFormat", "dataType", "dataSubtype", "specimenID", "individualID", "grant", "study", "consortium", "isModelSystem", "specimenIdSource", "individualIdSource"
+    "resourceType", "assay", "species", "organ", "tissue", "fileFormat", "dataType", "dataSubtype", "specimenID", "grant", "study", "consortium", "isModelSystem", "specimenIdSource"
   ],
   "anyOf": [
     {
