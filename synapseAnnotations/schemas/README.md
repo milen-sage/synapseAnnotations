@@ -1,7 +1,8 @@
 # Schemas
 
 An example schema for AMP-AD. It references the definitions in the
-`definitions/` folder. To check that the schema is valid JSON Schema:
+`definitions/` folder. To check that the schema is valid JSON Schema using
+[ajv-cli](https://github.com/jessedc/ajv-cli):
 
 ```
 ajv compile -s ampad_schema.json -r "definitions/*.json"
