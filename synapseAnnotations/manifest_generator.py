@@ -45,7 +45,7 @@ def column_to_letter(column):
      character = chr(ord('A') + column % 26)
      remainder = column // 26
      if column >= 26:
-        return columnToLetter(remainder-1) + character
+        return column_to_letter(remainder-1) + character
      else:
         return character
 
@@ -71,7 +71,7 @@ def get_manifest(se, root, title):
     spreadsheet_id = create_empty_manifest_spreadsheet(title, service)
 
     json_schema = get_JSONSchema_requirements(se, root, title)
-
+    print(json_schema["properties"]["assay"]["enum"])
     required_metadata_fields = {}
 
     # gathering dependency requirements and corresponding allowed values constraints for root node
@@ -84,12 +84,18 @@ def get_manifest(se, root, title):
          if "required" in conditional_reqs["if"]:
              for req in conditional_reqs["if"]["required"]: 
                 if req in conditional_reqs["if"]["properties"]:
-                    if not req in required_metadata_fields: 
-                        required_metadata_fields[req] = conditional_reqs["if"]["properties"][req]["enum"]
+                    if not req in required_metadata_fields:
+                        if req in json_schema["properties"]:
+                            required_metadata_fields[req] = json_schema["properties"][req]["enum"]
+                        else:
+                            required_metadata_fields[req] = conditional_reqs["if"]["properties"][req]["enum"]
             
              for req in conditional_reqs["then"]["required"]: 
                  if not req in required_metadata_fields:
-                     required_metadata_fields[req] = []    
+                        if req in json_schema["properties"]:
+                            required_metadata_fields[req] = json_schema["properties"][req]["enum"]
+                        else:
+                             required_metadata_fields[req] = []    
 
     # adding columns
     end_col = len(required_metadata_fields.keys())
@@ -108,7 +114,9 @@ def get_manifest(se, root, title):
 
     # adding valid values as dropdowns
     for i, (req, values) in enumerate(required_metadata_fields.items()):
-
+        if req == "assay":
+            print("assay")
+            print(values)
         req_vals = [{"userEnteredValue":value} for value in values if value]
 
         if not req_vals:
