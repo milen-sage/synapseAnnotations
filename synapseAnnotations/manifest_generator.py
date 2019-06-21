@@ -78,6 +78,8 @@ def get_manifest(se, root, title):
     for req in json_schema["required"]: 
         if req in json_schema["properties"]:
             required_metadata_fields[req] = json_schema["properties"][req]["enum"]
+            else:
+                required_metadata_fields[req] = [] 
     
     # gathering dependency requirements and allowed value constraints for conditional dependencies
     for conditional_reqs in json_schema["allOf"]: 
