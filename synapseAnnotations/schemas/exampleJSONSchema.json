@@ -6,14 +6,14 @@
    "properties": {
       "fileFormat": {
          "enum": [
-            "fastq",
-            "txt"
+            "txt",
+            "fastq"
          ]
       },
       "resourceType": {
          "enum": [
-            "tool",
-            "experimentalData"
+            "experimentalData",
+            "tool"
          ]
       }
    },
@@ -22,25 +22,6 @@
       "fileFormat"
    ],
    "allOf": [
-      {
-         "if": {
-            "properties": {
-               "resourceType": {
-                  "enum": [
-                     "tool"
-                  ]
-               }
-            },
-            "required": [
-               "resourceType"
-            ]
-         },
-         "then": {
-            "required": [
-               "softwareName"
-            ]
-         }
-      },
       {
          "if": {
             "properties": {
@@ -58,6 +39,25 @@
             "required": [
                "specimenID",
                "assay"
+            ]
+         }
+      },
+      {
+         "if": {
+            "properties": {
+               "resourceType": {
+                  "enum": [
+                     "tool"
+                  ]
+               }
+            },
+            "required": [
+               "resourceType"
+            ]
+         },
+         "then": {
+            "required": [
+               "softwareName"
             ]
          }
       }
