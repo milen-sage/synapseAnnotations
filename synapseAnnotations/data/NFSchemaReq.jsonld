@@ -5981,7 +5981,7 @@
                 "@id": "sms:True"
             },
             "rdfs:subClassOf": {
-                "@id": "bts:Thing"
+                "@id": "schema:Thing"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
