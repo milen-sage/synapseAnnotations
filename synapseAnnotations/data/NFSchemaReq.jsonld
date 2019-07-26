@@ -2038,22 +2038,10 @@
             }
         },
         {
-            "@id": "bts:proteomicEntity",
+            "@id": "bts:ProteomicEntity",
             "@type": "rdfs:Class",
             "rdfs:comment": "Entity and attributes derived from molecular proteomics",
-            "rdfs:label": "proteomicEntity",
-            "rdfs:subClassOf": {
-                "@id": "bts:molecularEntity"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            }
-        },
-        {
-            "@id": "bts:proteomicEntity",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Entity and attributes derived from molecular proteomics",
-            "rdfs:label": "proteomicEntity",
+            "rdfs:label": "ProteomicEntity",
             "rdfs:subClassOf": {
                 "@id": "bts:molecularEntity"
             },
