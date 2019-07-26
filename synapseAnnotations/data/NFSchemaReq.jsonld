@@ -277,10 +277,10 @@
             }
         },
         {
-            "@id": "bts:MolecularEntity",
+            "@id": "bts:molecularEntity",
             "@type": "rdfs:Class",
             "rdfs:comment": "A gene, gene product, small molecule or macromolecule (including protein complex)",
-            "rdfs:label": "MolecularEntity",
+            "rdfs:label": "molecularEntity",
             "rdfs:subClassOf": {
                 "@id": "bts:BiologicalEntity"
             },
@@ -294,7 +294,7 @@
             "rdfs:comment": "May be a chemical entity or a formulation with a chemical entity as active ingredient, or a complex material with multiple chemical entities as part",
             "rdfs:label": "ChemicalSubstance",
             "rdfs:subClassOf": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -438,7 +438,7 @@
             "rdfs:comment": "an entity that can either be directly located on a genome (gene, transcript, exon, regulatory region) or is encoded in a genome (protein)",
             "rdfs:label": "GenomicEntity",
             "rdfs:subClassOf": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -642,7 +642,7 @@
             "rdfs:comment": "any grouping of multiple genes or gene products related by common descent",
             "rdfs:label": "GeneFamily",
             "rdfs:subClassOf": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1005,13 +1005,13 @@
             "rdfs:comment": null,
             "rdfs:label": "molecularlyInteractsWith",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1035,13 +1035,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one changes the amount of the other within a system of interest",
             "rdfs:label": "affectsAbundanceOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1050,13 +1050,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the amount of the other within a system of interest",
             "rdfs:label": "increasesAbundanceOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1065,13 +1065,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the amount of the other within a system of interest",
             "rdfs:label": "decreasesAbundanceOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1080,13 +1080,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one changes the activity of the other within a system of interest",
             "rdfs:label": "affectsActivityOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1095,13 +1095,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the activity of the other within a system of interest",
             "rdfs:label": "increasesActivityOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1110,13 +1110,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the activity of the other within a system of interest",
             "rdfs:label": "decreasesActivityOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1125,7 +1125,7 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one changes the level of expression of the other within a system of interest",
             "rdfs:label": "affectsExpressionOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1140,7 +1140,7 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the level of expression of the other within a system of interest",
             "rdfs:label": "increasesExpressionOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1155,7 +1155,7 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the level of expression of the other within a system of interest",
             "rdfs:label": "decreasesExpressionOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1170,13 +1170,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one changes the rate or quality of folding of the other ",
             "rdfs:label": "affectsFoldingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1185,13 +1185,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the rate or quality of folding of the other ",
             "rdfs:label": "increasesFoldingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1200,13 +1200,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the rate or quality of folding of the other ",
             "rdfs:label": "decreasesFoldingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1215,13 +1215,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one changes the localization of the other within a system of interest",
             "rdfs:label": "affectsLocalizationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1230,13 +1230,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the proper localization of the other within a system of interest",
             "rdfs:label": "increasesLocalizationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1245,13 +1245,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the proper localization of the other within a system of interest",
             "rdfs:label": "decreasesLocalizationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1260,13 +1260,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the metabolic processing of the other within a system of interest",
             "rdfs:label": "affectsMetabolicProcessingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1275,13 +1275,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the rate of metabolic processing of the other within a system of interest",
             "rdfs:label": "increasesMetabolicProcessingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1290,13 +1290,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the rate of metabolic processing of the other within a system of interest",
             "rdfs:label": "decreasesMetabolicProcessingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1305,13 +1305,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one leads changes in the molecular modification(s) of the other (e.g. via post-translational modifications of proteins such as the addition of phosphoryl group, or via redox reaction that adds or subtracts electrons)",
             "rdfs:label": "affectsMolecularModificationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1320,13 +1320,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one leads to increased molecular modification(s) of the other (e.g. via post-translational modifications of proteins such as the addition of phosphoryl group, or via redox reaction that adds or subtracts electrons)",
             "rdfs:label": "increasesMolecularModificationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1335,13 +1335,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one leads to decreased molecular modification(s) of the other (e.g. via post-translational modifications of proteins such as the addition of phosphoryl group, or via redox reaction that adds or subtracts electrons)",
             "rdfs:label": "decreasesMolecularModificationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1350,13 +1350,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the rate of chemical synthesis of the other",
             "rdfs:label": "affectsSynthesisOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1365,13 +1365,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the rate of chemical synthesis of the other",
             "rdfs:label": "increasesSynthesisOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1380,13 +1380,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the rate of chemical synthesis of the other",
             "rdfs:label": "decreasesSynthesisOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1395,13 +1395,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the rate of degradation of the other within a system of interest",
             "rdfs:label": "affectsDegradationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1410,13 +1410,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the rate of degradation of the other within a system of interest",
             "rdfs:label": "increasesDegradationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1425,13 +1425,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the rate of degradation of the other within a system of interest",
             "rdfs:label": "decreasesDegradationOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1440,7 +1440,7 @@
             "rdfs:comment": "holds between a molecular entity and a genomic entity where the action or effect of the molecular entity impacts the rate of mutation of the genomic entity within a system of interest",
             "rdfs:label": "affectsMutationRateOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1455,7 +1455,7 @@
             "rdfs:comment": "holds between a molecular entity and a genomic entity where the action or effect of the molecular entity increases the rate of mutation of the genomic entity within a system of interest",
             "rdfs:label": "increasesMutationRateOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1470,7 +1470,7 @@
             "rdfs:comment": "holds between a molecular entity and a genomic entity where the action or effect of the molecular entity decreases the rate of mutation of the genomic entity within a system of interest",
             "rdfs:label": "decreasesMutationRateOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1485,13 +1485,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the susceptibility of a biological entity or system (e.g. an organism, cell, cellular component, macromolecular machine, biological or pathological process) to the other",
             "rdfs:label": "affectsResponseTo",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1500,13 +1500,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the susceptibility of a biological entity or system (e.g. an organism, cell, cellular component, macromolecular machine, biological or pathological process) to the other",
             "rdfs:label": "increasesResponseTo",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1515,13 +1515,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the susceptibility of a biological entity or system (e.g. an organism, cell, cellular component, macromolecular machine, biological or pathological process) to the other",
             "rdfs:label": "decreasesResponseTo",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1530,7 +1530,7 @@
             "rdfs:comment": "holds between a molecular entity and an mRNA where the action or effect of the molecular entity impacts the splicing of the mRNA",
             "rdfs:label": "affectsSplicingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1545,7 +1545,7 @@
             "rdfs:comment": "holds between a molecular entity and an mRNA where the action or effect of the molecular entity increases the proper splicing of the mRNA",
             "rdfs:label": "increasesSplicingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1560,7 +1560,7 @@
             "rdfs:comment": "holds between a molecular entity and an mRNA where the action or effect of the molecular entity decreases the proper splicing of the mRNA",
             "rdfs:label": "decreasesSplicingOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -1575,13 +1575,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the stability of the other within a system of interest",
             "rdfs:label": "affectsStabilityOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1590,13 +1590,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the stability of the other within a system of interest",
             "rdfs:label": "increasesStabilityOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1605,13 +1605,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the stability of the other within a system of interest",
             "rdfs:label": "decreasesStabilityOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1620,13 +1620,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the rate of transport of the other across some boundary in a system of interest",
             "rdfs:label": "affectsTransportOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1635,13 +1635,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the rate of transport of the other across some boundary in a system of interest",
             "rdfs:label": "increasesTransportOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1650,13 +1650,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the rate of transport of the other across some boundary in a system of interest",
             "rdfs:label": "decreasesTransportOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1665,13 +1665,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the rate of secretion of the other out of a cell, gland, or organ",
             "rdfs:label": "affectsSecretionOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1680,13 +1680,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the rate of secretion of the other out of a cell, gland, or organ",
             "rdfs:label": "increasesSecretionOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1695,13 +1695,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the rate of secretion of the other out of a cell, gland, or organ",
             "rdfs:label": "decreasesSecretionOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1710,13 +1710,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one impacts the rate of uptake of the other into of a cell, gland, or organ",
             "rdfs:label": "affectsUptakeOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1725,13 +1725,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one increases the rate of uptake of the other into of a cell, gland, or organ",
             "rdfs:label": "increasesUptakeOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1740,13 +1740,13 @@
             "rdfs:comment": "holds between two molecular entities where the action or effect of one decreases the rate of uptake of the other into of a cell, gland, or organ",
             "rdfs:label": "decreasesUptakeOf",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1770,13 +1770,13 @@
             "rdfs:comment": null,
             "rdfs:label": "regulates,EntityToEntity",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1881,7 +1881,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1896,7 +1896,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "schema:rangeIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             }
         },
         {
@@ -1905,7 +1905,7 @@
             "rdfs:comment": "holds between a measurable molecular entity and a disease or phenotypic feature, where the entity is used as an indicator of the presence or state of the disease or feature.",
             "rdfs:label": "biomarkerFor",
             "schema:domainIncludes": {
-                "@id": "bts:MolecularEntity"
+                "@id": "bts:molecularEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -3587,7 +3587,7 @@
             "rdfs:comment": "The action, reaction, or performance of an organism in response to external or internal stimuli.",
             "rdfs:label": "behavior process",
             "rdfs:subClassOf": {
-                "@id": "bts:BehavioralEntity"
+                "@id": "bts:behavioralEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -3611,7 +3611,7 @@
             "rdfs:comment": "The systematic study of metabolites, the chemical processes they are involved, and the chemical fingerprints of specific cellular processes in a whole cell, tissue, organ or organism.",
             "rdfs:label": "metabolomics",
             "rdfs:subClassOf": {
-                "@id": "bts:MetabolicEntity"
+                "@id": "bts:metabolicEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -3695,7 +3695,7 @@
             "rdfs:comment": "Protein and peptide identification, especially in the study of whole proteomes of organisms.",
             "rdfs:label": "proteomics",
             "rdfs:subClassOf": {
-                "@id": "bts:ProteomicEntity"
+                "@id": "bts:proteomicEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -3719,7 +3719,7 @@
             "rdfs:comment": "Kinomics is the study of protein kinases and protein kinase signaling.",
             "rdfs:label": "kinomics",
             "rdfs:subClassOf": {
-                "@id": "bts:ProteomicEntity"
+                "@id": "bts:proteomicEntity"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
