@@ -3035,7 +3035,7 @@
                 "@id": "sms:True"
             },
             "rdfs:subClassOf": {
-                "@id": "bts:Assay"
+                "@id": "bts:assay"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
